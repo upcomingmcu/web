@@ -7,3 +7,7 @@ export type ProductionType = {
   media_type: 'MOVIE' | 'TV';
   slug: string;
 };
+
+export type NextProductionType = {
+  next_production: string | undefined;
+} & ProductionType;

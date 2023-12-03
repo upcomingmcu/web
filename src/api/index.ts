@@ -1,4 +1,4 @@
-import { ProductionType } from './models';
+import { NextProductionType, ProductionType } from './models';
 
 export async function get<T>(path: string = ''): Promise<T> {
   const url = `https://api.umcu.app/productions${path}`;
@@ -24,6 +24,6 @@ export async function getProduction(slug: string) {
 }
 
 export async function getNextProduction(date: string | undefined = undefined) {
-  if (!date) return get<ProductionType>(`/next`);
-  return get<ProductionType>(`/next?date=${date}`);
+  if (!date) return get<NextProductionType>(`/next`);
+  return get<NextProductionType>(`/next?date=${date}`);
 }
