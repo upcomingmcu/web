@@ -1,5 +1,7 @@
 import { NextProductionType, ProductionType } from './models';
 
+export type { NextProductionType, ProductionType };
+
 export async function get<T>(path: string = ''): Promise<T> {
   const url = `https://api.umcu.app/productions${path}`;
   try {
